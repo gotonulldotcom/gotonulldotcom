@@ -1,0 +1,98 @@
+/* colors */
+:root {
+    --dark-bg: #111;
+    --dark-fg: #eee;
+    --light-bg: #fff;
+    --light-fg: #000;
+}
+* { color: var(--light-fg); }
+body { background: var(--light-bg); }
+body > header *, body > footer * { color: var(--dark-fg); }
+body > header, body > footer { background: var(--dark-bg); }
+@media screen and (prefers-color-scheme: dark) {
+    * { color: var(--dark-fg); }
+    body { background: var(--dark-bg); }
+    body > header *, body > footer * { color: var(--light-fg); }
+    body > header, body > footer { background: var(--light-bg); }
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+* {
+    background: inherit;
+    font-size: 16px;
+    font-family: monospace;
+    font-weight: normal;
+    line-height: 1.5rem;
+    text-decoration: none;
+}
+
+main, body > header {
+    max-width: 82ch; /* 80 characters wide + 2 for padding */
+    margin: 0 auto; /* center */
+    hyphens: auto; /* hyphenate words */
+    padding: 0 1ch;
+    /*text-align: justify; I can't "justify" this with fixed-width font */
+}
+
+/* h1 might be heading (home page) or might be .title */
+
+.title, h2, h3, h4, h5, h6 { margin: 2rem 0 1.5rem 0; }
+
+/* style the title */
+.title {
+    text-align: center;
+}
+
+/* underline links */
+a { text-decoration: underline; }
+
+/* bold everything else (typewriters didn't have italics) */
+b, i, u, em, strong, .title, h2, h3, h4, h5, h6, mark { font-weight: bold; }
+
+pre {
+    margin: 1.5rem;
+    white-space: pre-wrap;
+    hyphens: none;
+    word-break: break-all;
+}
+
+/* asterisk bullets */
+ul { padding-left: 2ch; }
+ul > li { position: relative; list-style: none; }
+ul > li:after { content: "* "; position: absolute; left: -2ch; top: 0; }
+
+/* header/footer */
+body > header, body > footer {
+    height: 3.5rem;
+}
+body > header > *:first-child {
+    float: left;
+}
+body > header a {
+    text-decoration: none;
+}
+body > header > nav {
+    float: right;
+}
+body > header:before {
+    content: "";
+    position: absolute;
+    background-color: inherit;
+    left: 0;
+    right: 0;
+    height: inherit;
+    z-index: -1;
+}
+body > header > nav > ul > li { display: inline-block; }
+body > header > nav > ul > li:after { content: ""; }
+body > header { margin-bottom: 3rem; }
+body > footer { text-align: center; margin-top: 3rem; padding-top: 1px; }

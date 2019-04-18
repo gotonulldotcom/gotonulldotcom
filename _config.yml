@@ -1,0 +1,26 @@
+# Global
+exclude:
+  - CNAME
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+timezone: "Australia/Sydney"
+defaults:
+  # - scope:
+  #     path: ""
+  #     type: "posts"
+  #   values:
+  #     comments: true
+
+# Build
+watch: true
+incremental: true
+strict_front_matter: true
+permalink: pretty
+sass:
+  style: compressed
+
+# Templates
+title: goto null;
+url: https://www.gotonull.com/
