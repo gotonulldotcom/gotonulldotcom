@@ -18,3 +18,11 @@ Run:
 ```sh
 bundle exec jekyll serve
 ```
+
+Favicon from https://favicon.io/favicon-generator/:
+
+* Font family: Share Tech Mono
+
+## Help
+
+https://jekyllrb.com/docs/
