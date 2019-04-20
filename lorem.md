@@ -29,7 +29,7 @@ ethics, very popular during the Renaissance. The first line of Lorem Ipsum,
 
 <pre><code>from django.contrib import admin
 
-from .models import MicrositeProvider, GroupMicrositeProvider, Microsite  # this is a really long line that should wrap
+from .models import MicrositeProvider, GroupMicrositeProvider, GroupMicrositeProvider2  # this is a really long line that should wrap
 
 
 admin.site.register(MicrositeProvider)
