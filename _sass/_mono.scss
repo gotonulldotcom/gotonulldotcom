@@ -24,6 +24,7 @@ body {
     min-height: 100%;
     margin: 0;
     overflow-x: hidden;
+    position: relative;
 }
 
 * {
@@ -35,7 +36,7 @@ body {
     text-decoration: none;
 }
 
-main, body > header {
+body > main, body > header {
     max-width: 82ch; /* 80 characters wide + 2 for padding */
     margin: 0 auto; /* center */
     hyphens: auto; /* hyphenate words */
@@ -85,7 +86,7 @@ body > header > nav {
 }
 body > header:before {
     content: "";
-    position: absolute;
+    position: fixed;
     background-color: inherit;
     left: 0;
     right: 0;
@@ -94,5 +95,6 @@ body > header:before {
 }
 body > header > nav > ul > li { display: inline-block; }
 body > header > nav > ul > li:after { content: ""; }
-body > header { margin-bottom: 3rem; }
-body > footer { text-align: center; margin-top: 3rem; padding-top: 1px; }
+body > header { /*margin-bottom: 3rem;*/ position: fixed; top: 0; left: 0; right: 0; }
+body > footer { text-align: center; /*margin-top: 3rem;*/ padding-top: 1px; position: absolute; bottom: 0; width: 100%; }
+body > main { padding-bottom: 4.5rem; padding-top: 4.5rem; }
