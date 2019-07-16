@@ -20,6 +20,10 @@ permalink: /:slug/
 sass:
   style: compressed
 
+# plugins
+plugins:
+  - jekyll-target-blank
+
 # Templates
 title: goto null;
 url: https://www.gotonull.com/

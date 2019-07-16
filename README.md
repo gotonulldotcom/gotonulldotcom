@@ -4,7 +4,7 @@ An untitled website.
 
 ## Development
 
-Setup:
+**Setup:**
 
 ```sh
 brew install ruby
@@ -13,10 +13,31 @@ mkdir -p vendor/bundler
 bundle install --path vendor/bundle
 ```
 
-Run:
+**Run:**
 
 ```sh
 bundle exec jekyll serve
+```
+
+**Adding a plugin:**
+
+1. Add to Gemfile:
+
+```
+gem 'my-plugin', group: :jekyll_plugins
+```
+
+2. Get bundle to install
+
+```sh
+bundle install --path vendor/bundle
+```
+
+3. Update `_config.yml`:
+
+```yml
+plugins:
+  - my-plugin
 ```
 
 Favicon from https://favicon.io/favicon-generator/:
