@@ -1,0 +1,10 @@
+---
+---
+<h1>{{ site.title }}</h1>
+
+{% for post in site.posts %}
+    <p>
+        <a href="/{{ post.slug }}/">{{ post.title }}</a>
+        <time datetime="{{ post.date|date:'%Y-%m-%d' }}">{{ post.date|date:"%e %b %Y" }}</time>
+    </p>
+{% endfor %}

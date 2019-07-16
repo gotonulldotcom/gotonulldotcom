@@ -7,17 +7,16 @@ exclude:
   - vendor
 timezone: "Australia/Sydney"
 defaults:
-  # - scope:
-  #     path: ""
-  #     type: "posts"
-  #   values:
-  #     comments: true
+  - scope:
+      path: ""
+    values:
+      layout: default
 
 # Build
 watch: true
 incremental: true
 strict_front_matter: true
-permalink: pretty
+permalink: /:slug/
 sass:
   style: compressed
 
